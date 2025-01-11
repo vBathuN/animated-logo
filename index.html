@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+    font-family: 'Tamil039';
+    src: url('https://www.rtbs.in/font/Tamil039.woff2') format('woff2'),
+        url('https://www.rtbs.in/font/Tamil039.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.animation {
+  width: 35em;
+  height: 4em;
+  margin: 0em auto;
+  position: relative;
+  word-spacing: -10px;
+}
+
+
+.right {
+  color: blue;
+  important; font-family: 'Tamil039'; font-weight: bold; font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+}
+
+.left {
+  color: red;
+  important; font-family: 'Tamil039'; font-weight: bold; font-style: normal;
+  letter-spacing: 1px;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+}
+
+.mask {
+  overflow: hidden;
+  position: relative;
+}
+
+/*********************
+* Animation 3
+*********************/
+
+@keyframes animation-3-left {
+  0% {transform: translate3d(100%, 0, 0);}  
+  30% {transform: translate3d(100%, 0, 0);}  
+  60% {transform: translate3d(0, 0, 0);}
+}
+
+@keyframes animation-3-right {
+  0% {transform: translate3d(-100%, 0, 0);}  
+  30% {transform: translate3d(-100%, 0, 0);}  
+  60% {transform: translate3d(0, 0, 0);}
+}
+
+#animation-3 {
+  
+  & > div {
+    display: inline-block;
+    width: 50%;
+    height: 2em;
+  }
+  
+  & > div:first-child {
+    font-size: 2em;
+    text-align: right;
+    
+    div {
+      animation: 2.2s ease-out infinite alternate both animation-3-left;
+    }
+  }
+  
+  & > div:last-child {
+    font-size: 2em;
+    line-height: 2.20;
+    
+    div {
+      animation: 2.2s ease-out infinite alternate both animation-3-right;
+    }
+  }
+}
+
+</style>
+</head>
+<body>
+  <div id="animation-3" class="animation">
+    <div class="left mask">
+      <div>எண்ணங்களும்</div>
+    </div><div class="right mask">
+      <div>&nbsp;வண்ணங்களும்</div>
+    </div>
+  </div>
+</body>
+</html>
